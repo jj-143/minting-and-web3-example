@@ -21,7 +21,6 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: "0.8.4",
-  // TODO: what does this do
   networks: {
     localhost: {
       // local Ganache network

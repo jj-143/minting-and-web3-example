@@ -1,15 +1,13 @@
-# Basic Sample Hardhat Project
+# Contract
+## Description
+* tokenURI<string> (json형식의 metadata를 가리키는 주소, 참조: https://eips.ethereum.org/EIPS/eip-721) 을 넣어 민팅할 수 있는 간단한 Contract `MintNFT` 입니다.
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+### setup
+* `npx hardhat` - "Basic Sample Hardhat Project" 로 프로젝트 생성 & TypeScript 추가.
+* localhost가 Ganache (:7545) 로 세팅되어있습니다 - hardhat.config.ts
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+### Scripts
+* install: `yarn install`
+* test: `npx hardhat test`
+* compile artifacts: `npx hardhat compile`
+* deploy "MintNFT" contract (to Ganache local network): `npx hardhat run ./scripts/deploy-mint-nft.ts --network localhost`
