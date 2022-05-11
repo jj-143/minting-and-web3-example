@@ -1,5 +1,5 @@
 {
   "name": "hardhat-project",
   "private": true,
-  "workspaces": ["contract"]
+  "workspaces": ["contract", "react-client"]
 }
