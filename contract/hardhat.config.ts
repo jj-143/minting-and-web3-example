@@ -3,6 +3,9 @@ import "@nomiclabs/hardhat-ethers";
 
 import { task } from "hardhat/config";
 
+const GOERLI_API_KEY = process.env.GOERLI_API_KEY;
+const ACCOUNT_KEY = process.env.ACCOUNT_KEY;
+
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
@@ -25,6 +28,10 @@ module.exports = {
     localhost: {
       // local Ganache network
       url: "http://127.0.0.1:7545",
+    },
+    goerli: {
+      url: `https://eth-goerli.alchemyapi.io/v2/${GOERLI_API_KEY}`,
+      accounts: [`${ACCOUNT_KEY}`],
     },
   },
 };

@@ -8,6 +8,9 @@ async function getContract() {
   return contract;
 }
 
-getContract().then((contract) =>
-  console.log("[*] MintNFT deployed @", contract.address)
-);
+getContract()
+  .then((contract) => console.log("[*] MintNFT deployed @", contract.address))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });

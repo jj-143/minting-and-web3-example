@@ -15,7 +15,7 @@ function Account() {
     connector: new InjectedConnector(),
     onError: (err) => {
       if (err instanceof ConnectorNotFoundError) {
-        setMsg("Install MetaMast first!");
+        setMsg("Install MetaMask first!");
       }
     },
     onConnect: () => {

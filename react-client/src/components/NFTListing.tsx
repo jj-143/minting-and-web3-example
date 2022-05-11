@@ -24,7 +24,7 @@ function NFTListing() {
       <h2>Browse NFTs</h2>
       {tokens && (
         <>
-          <h3>{tokens.length} NFTs registered</h3>
+          <h3>Found Contract. {tokens.length} NFTs registered</h3>
           {tokens?.map((it) => (
             <div key={it.id.toString()}>
               NFT #{it.id.toString()} - uri: "{it.uri}"
